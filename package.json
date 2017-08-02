@@ -1,0 +1,20 @@
+{
+  "name": "reactor",
+  "version": "1.0.0",
+  "description": "react practising",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "radin",
+    "learn"
+  ],
+  "author": "radin reth",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}
