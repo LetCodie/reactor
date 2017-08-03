@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: __dirname + '/src/client.js',
+  entry: ["babel-polyfill", __dirname + '/src/client.js'],
   output: {
     filename: 'index.js',
   },
@@ -9,5 +9,14 @@ module.exports = {
     inline: true,
     contentBase: './public',
     port:3000
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
   }
 };
