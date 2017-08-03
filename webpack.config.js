@@ -1,5 +1,10 @@
+const path = require('path');
+
 module.exports = {
-  entry: './main.js',
+  entry: __dirname + '/src/client.js',
+  output: {
+    filename: 'index.js',
+  },
   devServer:{
     inline: true,
     contentBase: './public',
