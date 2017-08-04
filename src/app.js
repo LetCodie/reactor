@@ -7,8 +7,8 @@ export default class App extends React.Component {
       <div className="container">
         <h1>Building React.js User Interfaces 1.1</h1>
         <p>with Bootstrap and Sass</p>
-        <Button className="-outline-primary" href="#" target="_blank" />
-        <Button className="-danger -sm" target="_blank" />
+        <Button className="-outline-primary" disabled href="#" target="_blank" />
+        <Button className="-danger -sm" disabled target="_blank" />
 
         <Button className="-outline-info -lg -block" href="#" target="_blank" />
 
