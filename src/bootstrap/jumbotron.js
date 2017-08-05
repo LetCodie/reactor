@@ -4,9 +4,13 @@ import Container from './container';
 
 export default class Jumbotron extends React.Component {
   render() {
-    return <div {...this.props} className={classify('jumbotron', this.props.className)}>
-      <Container className="blue" style={{color:'red'}}>
-        { this.props.children }
+    const props = Object.assign({}, this.props);
+    const fluid = props.containerFluid;
+    delete props.containerFluid;
+
+    return <div {...props} className={classify('jumbotron', props.className)}>
+      <Container fluid={fluid} className="blue" style={{color:'red'}}>
+        { props.children }
       </Container>
     </div>;
   }
