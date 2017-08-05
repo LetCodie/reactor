@@ -1,5 +1,9 @@
-export function classify(v) {
-  if(v[0]==='-') v = ` ${v}`;
-  let value = v.split(' ').join(` btn`);
-  return `btn${value}`;
+export function classify(k, v) {
+  v = ` ${v}`;
+  let value = v.split(' ').map( (val) => {
+    if( val[0]==='-' ) return `${k}${val}`;
+    else return val;
+  }).join(" ");
+
+  return `${k} ${value}`;
 }
