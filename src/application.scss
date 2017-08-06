@@ -1,0 +1,7 @@
+$img-url: url(/img/moon-1817885_1920.jpg);
+$text-color: blue;
+
+.custom {
+  background: $img-url no-repeat center center;
+  color: $text-color;
+}
