@@ -5,7 +5,7 @@ import './application.scss';
 
 export default class App extends React.Component {
   render() {
-    return <Jumbotron containerFluid={false} className="-fluid text-sm-center custom">
+    return <Jumbotron containerFluid={false} className="-faluid text-sm-center custom">
         <h1>Building React.js User Interfaces 1.1</h1>
         <p>with Bootstrap and Sass</p>
         <Button className="-outline-primary" href="#" target="_blank" />

@@ -1,9 +1,12 @@
 // @import '../node_modules/bootstrap/scss/bootstrap';
+@mixin my-mixin($path) {
+  background: $path no-repeat center center;
+  color: white;
+}
 
 $img-url: url(/img/moon-1817885_1920.jpg);
 $text-color: blue;
 
 .custom {
-  background: $img-url no-repeat center center;
-  color: $text-color;
+  @include my-mixin($img-url);
 }
