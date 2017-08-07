@@ -7,6 +7,6 @@ export default class Button extends React.Component {
     const Tag = this.props.href ? 'a' : 'button';
     const className = classify( 'btn', this.props.className ) + (this.props.disabled ? ' disabled' : '');
 
-    return <Tag  {...this.props } className={className}>Visit us!</Tag>;
+    return <Tag  {...this.props } className={className}>{this.props.label || this.props.children}</Tag>;
   }
 }

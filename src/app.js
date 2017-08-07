@@ -14,10 +14,12 @@ export default class App extends React.Component {
               transitionLeaveTimeout={300}><Jumbotron containerFluid={false} className="-fluid custom">
         <h1>Building React.js User Interfaces 1.1</h1>
         <p>with Bootstrap and Sass</p>
-        <Button className="-outline-primary" href="#" target="_blank" />
-        <Button className="-danger -sm" target="_blank" />
+        <Button className="-primary" href="#" target="_blank" label="Discover things" />
+        <Button className="-danger -sm" target="_blank">A miracle happen!</Button>
 
-        <Button className="-outline-info -lg -block" href="#" target="_blank" />
+        <p></p>
+        <Button className="-success -lg btn -block" href="#" target="_blank" label="Sound so great!" />
+
     </Jumbotron></ReactCSSTransitionGroup>;
   }
 }
