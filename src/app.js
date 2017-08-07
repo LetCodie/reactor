@@ -9,14 +9,17 @@ export default class App extends React.Component {
     super(props);
 
     this.onClick = this.onClick.bind(this);
-    this.state = { clicked: 0 };
+    this.state = { clicked: 0, labels:[] };
   }
 
   onClick(e) {
-    this.setState({ clicked: this.state.clicked+1 });
+    let labels = this.state.labels.concat([this.state.clicked]);
+    this.setState({ clicked: this.state.clicked+1, labels: labels });
   }
 
   render() {
+    let buttons = this.state.labels.map((label,i) => <Button className="-primary -sm" key={i}>{label}</Button>);
+
     return <ReactCSSTransitionGroup
               transitionName="app"
               transitionAppear={true}
@@ -30,7 +33,12 @@ export default class App extends React.Component {
 
         <p></p>
         <Button onClick={this.onClick} className="-success -lg btn -block" href="#" label={"You clicked: " + this.state.clicked} />
-
+        <ReactCSSTransitionGroup
+                  transitionName="app"
+                  transitionEnterTimeout={500}
+                  transitionLeaveTimeout={300}>
+          {buttons}
+        </ReactCSSTransitionGroup>
     </Jumbotron></ReactCSSTransitionGroup>;
   }
 }
