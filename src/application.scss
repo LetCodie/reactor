@@ -14,26 +14,23 @@ $text-color: blue;
 // animation
 .app-enter {
   opacity: 0.01;
-}
-
-.app-enter.app-enter-active {
-  opacity: 1;
-  transition: opacity .5s east-in;
+  &-active {
+    opacity: 1;
+    transition: opacity .5s east-in;
+  }
 }
 
 .app-leave {
   opacity: 1;
-}
-
-.app-leave.app-leave-active {
-  transition: opacity .3s east-out;
+  &-active {
+    transition: opacity .5s east-out;
+  }
 }
 
 .app-appear {
   opacity: 0.01;
-}
-
-.app-appear.app-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+  &-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
 }

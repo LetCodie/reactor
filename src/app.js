@@ -9,12 +9,17 @@ export default class App extends React.Component {
     super(props);
 
     this.onClick = this.onClick.bind(this);
+    this.onReset = this.onReset.bind(this);
     this.state = { clicked: 0, labels:[] };
   }
 
   onClick(e) {
     let labels = this.state.labels.concat([this.state.clicked]);
     this.setState({ clicked: this.state.clicked+1, labels: labels });
+  }
+
+  onReset(e) {
+    this.setState({ clicked: 0, labels: [] });
   }
 
   render() {
@@ -28,7 +33,7 @@ export default class App extends React.Component {
               transitionLeaveTimeout={300}><Jumbotron containerFluid={false} className="-fluid custom">
         <h1>Building React.js User Interfaces 1.1</h1>
         <p>with Bootstrap and Sass</p>
-        <Button className="-primary" href="#" target="_blank" label="Discover things" />
+        <Button onClick={this.onReset} className="-primary" href="#" label="Reset" />
         <Button className="-danger -sm" target="_blank">A miracle happen!</Button>
 
         <p></p>
@@ -36,7 +41,7 @@ export default class App extends React.Component {
         <ReactCSSTransitionGroup
                   transitionName="app"
                   transitionEnterTimeout={500}
-                  transitionLeaveTimeout={300}>
+                  transitionLeaveTimeout={500}>
           {buttons}
         </ReactCSSTransitionGroup>
     </Jumbotron></ReactCSSTransitionGroup>;
