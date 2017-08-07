@@ -5,6 +5,16 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './application.scss';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(e) {
+    console.log(this);
+  }
+
   render() {
     return <ReactCSSTransitionGroup
               transitionName="app"
@@ -18,7 +28,7 @@ export default class App extends React.Component {
         <Button className="-danger -sm" target="_blank">A miracle happen!</Button>
 
         <p></p>
-        <Button className="-success -lg btn -block" href="#" target="_blank" label="Sound so great!" />
+        <Button onClick={this.onClick} className="-success -lg btn -block" href="#" label="Sound so great!" />
 
     </Jumbotron></ReactCSSTransitionGroup>;
   }
